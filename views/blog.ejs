@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My blog</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<script   src="https://code.jquery.com/jquery-3.1.0.slim.js" integrity="sha256-L6ppAjL6jgtRmfiuigeEE5AwNI2pH/X9IBbPyanJeZw=" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
+    <!-- <script type="text/javascript" src="script.js"></script> -->
+  </head>
+  <body class="container" style="background-color:powderblue;">
+    <!-- http://getbootstrap.com/components/#navbar -->
+          <!-- Collect the nav links, forms, and other content for toggling -->
+                <h3 class="text-success" style="text-align:center">Edwin Velazquez's Blog</h3>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                    <li><a href="C:/Users/EDWIN/Desktop/TTP/day10/portfolio.html">Home</a></li>
+    <br><br>
+    <div class="row">
+      <br>
+      <div class="col-md-12">
+        <br><form id="search_form" action="/blog" method="post">
+          <input
+            type="text"
+            name="name"
+            class="form-control"
+            placeholder="Enter Name" />
+          <span class="input-group-btn">
+        <button onclick="submitPost()" class="btn btn-default" type="submit">Submit</button>
+      </span>
+      <input type="text" class="form-control" placeholder="Enter Message">
+      </form>
+      </div>
+    </div>
+</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="text-success">Posts</h3>
+        <table class="table">
+          <tbody>
+            <thead>
+              <tr>
+                <td>Name</td>
+                <!-- <td>Title</td> -->
+                <td>Text</td>
+                <!-- <td>Date</td> -->
+              </tr>
+            </thead id="posts_table">
+
+          </tbody>
+        </table>
+<h4><%= blogtable[0].name%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= blogtable[0].text%></h4>
+<h4><%= blogtable[1].name%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= blogtable[1].text%></h4>
+        <!-- &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= blogtable[0].name%>&nbsp&nbsp&<%= blogtable[0].name%>nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= blogtable[0].text%> -->
+      </div>
+      <br>
+      <br>
+      <div>
+         <ul>
+           <% for(var i = 0; i < blogtable.length; i++) { %>
+             <li>
+             <%= JSON.stringify(blogtable[i]) %></li>
+                <% } %>    </ul>
+              </div>
+    </div>
+    </div>
+  </body>
+</html>
