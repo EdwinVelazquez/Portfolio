@@ -29,7 +29,6 @@ app.use(express.static("public"));
 //         });
 //     });
 // });
-
 app.get('/blog', function(req, res) {
   pg.connect('postgres://edwin:Newcave5@localhost/blog', function(err, client, done) {
     //request all of the colum
@@ -45,7 +44,6 @@ app.get('/blog', function(req, res) {
     });
   });
 });
-
  //This works!
 //connect to a database
   //  pg.connect('postgres://edwin:Newcave5@localhost/blog', function(err, client, done) {
@@ -53,17 +51,14 @@ app.get('/blog', function(req, res) {
   //  client.query(`select * from blogtable`, function(err, result) {
   //    //localhost/test?user=fred&password=secret&ssl=true";
   //    console.log(result.rows);
-  //
   //  //let pg know we're done with this client
   //    done();
   //  //close the pg pool entirely.//this is done so our node process will exit.
   //    pg.end();
   // });});
-
 app.post('/blog', function (req, res, next) {
   const blogtable = req.body
   console.log(blogtable);
-
   pg.connect('postgres://edwin:Newcave5@localhost/blog', function (err, client, done) {
     if (err) {
       // pass the error to the express error handler
@@ -79,7 +74,6 @@ app.post('/blog', function (req, res, next) {
     })
   })
 })
-
 app.get('/portfolio', function(req, res){
     res.render('portfolio.ejs');
 });
