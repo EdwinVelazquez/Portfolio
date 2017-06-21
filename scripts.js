@@ -57,6 +57,7 @@ app.get('/blog', function(req, res) {
   //    pg.end();
   // });});
 app.post('/blog', function (req, res, next) {
+  console.log('hello')
   const blogtable = req.body
   console.log(blogtable);
   pg.connect('postgres://edwin:Newcave5@localhost/blog', function (err, client, done) {
@@ -70,7 +71,7 @@ app.post('/blog', function (req, res, next) {
         // pass the error to the express error handler
         return next(err)
       }
-      res.send(3000)
+      res.end(3000)
     })
   })
 })

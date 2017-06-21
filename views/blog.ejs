@@ -9,26 +9,23 @@
     <!-- <script type="text/javascript" src="script.js"></script> -->
   </head>
   <body class="container" style="background-color:powderblue;">
+    <br>
+    <div id="container", style="text-align:center">
+      <button type="button home-button" id="button4" ><a href="http://localhost:3000/portfolio">Home</a></button>
+    </div>
     <!-- http://getbootstrap.com/components/#navbar -->
           <!-- Collect the nav links, forms, and other content for toggling -->
                 <h3 class="text-success" style="text-align:center">Edwin Velazquez's Blog</h3>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                  <ul class="nav navbar-nav">
-                    <li><a href="C:/Users/EDWIN/Desktop/TTP/day10/portfolio.html">Home</a></li>
-    <br><br>
+  <br><br>
     <div class="row">
       <br>
       <div class="col-md-12">
         <br><form id="search_form" action="/blog" method="post">
-          <input
-            type="text"
-            name="name"
-            class="form-control"
-            placeholder="Enter Name" />
+          <input id = "name" type="text" class="form-control" placeholder="Enter Name" >
+          <input id = "text" type="text" class="form-control" placeholder="Enter Message">
           <span class="input-group-btn">
         <button onclick="submitPost()" class="btn btn-default" type="submit">Submit</button>
       </span>
-      <input type="text" class="form-control" placeholder="Enter Message">
       </form>
       </div>
     </div>
@@ -37,7 +34,7 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        <h3 class="text-success">Posts</h3>
+        <h3 class="text-success" style=padding-left:10px;>Posts</h3>
         <table class="table">
           <tbody>
             <thead>

@@ -1,0 +1,171 @@
+h1 {
+  color: red;
+  font-family: "Georgia";
+font-size: 19px;
+text-align: center;
+}
+h2 {
+  font-family: "Georgia";
+  font-size: 20px;
+  color: black;
+  }
+h3 {
+  font-family: "Georgia";
+  font-size: 19px;
+  color: green;
+}
+h4 {
+  font-family: "Georgia";
+  font-size: 24px;
+  color: green;
+}
+p {
+  line-height: 32px;
+  color: red;*/
+}
+ul {
+  /*margin-left: 21px;*/
+  font-size: 24px;
+  line-height: 30px;
+  color: red;
+}
+ul li {
+   list-style: disc;
+   color: green;
+   font-size: 24px;
+}
+.blink {
+    animation-duration: 1s;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(2, start);
+}
+@keyframes blink {
+    80% {
+        visibility: hidden;
+        color: red;
+        font-family: "Georgia";
+        font-size: 38px;
+        }
+}
+body {
+    background-color: lightblue;
+}
+/* Large desktop */@media screen and (min-width: 1200px) { ... }
+/* Portrait tablet to landscape and desktop */@media screen and (min-width: 768px) and (max-width: 979px)
+{ ... }
+/* Landscape phone to portrait tablet */@media screen and (max-width: 767px)
+{
+  body{background-color: orange;}
+}
+/* Landscape phones and down */@media screen and(max-width: 480px)
+body{
+  margin-left: 0;
+}
+#button1{
+    width: 85px;
+    height: 30px;
+    font-size: 19px;
+}
+#button2{
+    width: 85px;
+    height: 30px;
+    font-size: 19px;
+}
+#button3{
+    width: 85px;
+    height: 30px;
+    font-size: 19px;
+}
+#container{
+    text-align: center;
+    }
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+.responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.float-left {
+   float: left;
+ }
+.float-right {
+      float: right;
+    }
+.div1 {
+        float: left;
+        width: 100px;
+        height: 50px;
+        margin: 50px;
+    }
+
+.div2 {
+        border: 1px solid red;
+        text-align: center;
+    }
+
+
+.div3 {
+        float: left;
+        width: 100px;
+        height: 50px;
+        margin: 10px;
+        border: 3px solid #73AD21;
+    }
+
+.div4 {
+        clear: left;
+        border: 1px solid red;
+    }
+    .floating-box {
+        display: inline-block;
+        width: 400px;
+        height:400px;
+        margin: 10px;
+        text-align: center;
+        }
+    img {
+        /*float: right;*/
+        margin: 0 0 10px 10px;
+        text-align: center;
+    }

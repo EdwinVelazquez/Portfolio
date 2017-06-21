@@ -1,4 +1,5 @@
 function submitPost () {
+  console.log("can you hear me")
     var name = document.getElementById("name").value;
     var text = document.getElementById("text").value;
     var data = {"name":name,"text":text}
