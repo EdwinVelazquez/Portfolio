@@ -1,7 +1,9 @@
 git sta{
   "name": "day10",
   "version": "1.0.0",
-  "description": "",
+ "engines": {
+    "node": "6.11.0"
+  }, "description": "",
   "main": "scripts.js",
   "dependencies": {
     "body-parser": "^1.17.2",
