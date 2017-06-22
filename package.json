@@ -1,4 +1,4 @@
-{
+git sta{
   "name": "day10",
   "version": "1.0.0",
   "description": "",
@@ -11,7 +11,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+ "start": "node scripts.js" \  "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC"

@@ -1,3 +1,10 @@
+var sequelize;
+if (process.env.DATABASE_URL) {
+  sequelize = process.env.DATABASE_URL;
+}else{
+  sequelize = 'postgres://oeapinlguzqxin:c24f084390a227001c9b80d98f381aaa4d927712d378305a348a9389e57aef10@ec2-23-23-86-179.compute-1.amazonaws.com:5432/d9r8lpdtffahos';
+  //postgres://oeapinlguzqxin:c24f084390a227001c9b80d98f381aaa4d927712d378305a348a9389e57aef10@ec2-23-23-86-179.compute-1.amazonaws.com:5432/d9r8lpdtffahos
+}
 var express = require('express');
 var bodyparser = require('body-parser');
 //create an express application
@@ -30,7 +37,7 @@ app.use(express.static("public"));
 //     });
 // });
 app.get('/blog', function(req, res) {
-  pg.connect('postgres://edwin:Newcave5@localhost/blog', function(err, client, done) {
+  pg.connect(sequelize, function(err, client, done) {
     //request all of the colum
     client.query(`select * from blogtable`, function(err, result) {
       //localhost/test?user=fred&password=secret&ssl=true";
@@ -60,7 +67,7 @@ app.post('/blog', function (req, res, next) {
   console.log('hello')
   const blogtable = req.body
   console.log(blogtable);
-  pg.connect('postgres://edwin:Newcave5@localhost/blog', function (err, client, done) {
+  pg.connect(sequelize, function (err, client, done) {
     if (err) {
       // pass the error to the express error handler
       return next(err)
